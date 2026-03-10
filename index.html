@@ -203,6 +203,35 @@
             background: var(--bg-light);
         }
 
+        /* Override max-width for full-width bg sections */
+        #services,
+        #contact {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #services > *,
+        #contact > * {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        #services .section-title,
+        #contact .section-title {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .services-inner, .contact-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -356,6 +385,110 @@
             font-weight: bold;
         }
 
+        /* Education Section */
+        #education {
+            background: var(--bg-light);
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #education > .section-title,
+        #education > .education-grid {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .education-card .edu-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .education-card h3 {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .education-card .school {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .education-card .degree {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .edu-note {
+            display: inline-block;
+            background: #d1fae5;
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+
+        /* Certifications Section */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-info p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
         #contact {
             text-align: center;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -445,6 +578,8 @@
                 <li><a href="#services" onclick="closeMenu()">Services</a></li>
                 <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
                 <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#education" onclick="closeMenu()">Education</a></li>
+                <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
@@ -453,7 +588,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>SOSEIT BEDORIA</h1>
-            <p class="tagline">Technical Virtual Assistant | WordPress Specialist | Website Manager</p>
+            <p class="tagline">Web Developer & Webmaster | WordPress Specialist | DevOps & Cloud Infrastructure</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Hire Me</a>
                 <a href="#services" class="btn btn-secondary">My Services</a>
@@ -466,18 +601,13 @@
         <div class="about-content">
             <div class="about-text">
                 <p>
-                    <strong>Hello! I'm Soseit Bedoria,</strong> a reliable Technical Virtual Assistant with 3.5 years of experience 
-                    managing and maintaining WordPress websites. Currently working as a Webmaster at Conchology Inc., 
-                    I handle the day-to-day operations of 10+ WordPress websites with thousands of data entries.
+                    <strong>Hello! I'm Soseit Bedoria,</strong> a results-driven Web Developer with over 2 years of hands-on experience in cloud infrastructure, CI/CD automation, and full-cycle web development.
                 </p>
                 <p style="margin-top: 1rem;">
-                    I specialize in <strong>WordPress management, website updates, content entry, and technical support</strong>. 
-                    I can help you maintain your websites, handle deployments, manage servers (DigitalOcean, Cloudways), 
-                    and ensure everything runs smoothly so you can focus on growing your business.
+                    Currently working as a <strong>Webmaster at Conchology Inc.</strong>, I manage and maintain 10+ WordPress websites, lead cloud migrations, and build automated deployment pipelines. I've proven ability to manage large-scale production environments, optimize application performance, and maintain high-availability systems.
                 </p>
                 <p style="margin-top: 1rem;">
-                    I'm detail-oriented, a quick learner, and great at communication. Whether you need ongoing website 
-                    support or help with technical administrative tasks, I'm here to make your life easier.
+                    I have a strong technical background in <strong>PHP, MySQL, WordPress, Kubernetes, and modern DevOps practices</strong>. I'm detail-oriented with a track record of delivering reliable solutions across multiple simultaneous projects with minimal supervision.
                 </p>
             </div>
             <div class="contact-info">
@@ -492,7 +622,7 @@
                     ✉️ <a href="mailto:soseitbedoria03@gmail.com">soseitbedoria03@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    💼 <a href="https://linkedin.com/in/soseit-bedoria03" target="_blank">LinkedIn Profile</a>
+                    💼 <a href="https://linkedin.com/in/soseit-bedoria03" target="_blank">linkedin.com/in/soseit-bedoria03</a>
                 </div>
             </div>
         </div>
@@ -516,11 +646,22 @@
                 <div class="service-icon">☁️</div>
                 <h3>Website Deployment & Hosting</h3>
                 <ul>
-                    <li>Deploy sites to DigitalOcean</li>
-                    <li>Cloudways server management</li>
-                    <li>Website migrations</li>
-                    <li>Domain & DNS configuration</li>
-                    <li>Server monitoring</li>
+                    <li>Deploy sites to DigitalOcean & Cloudways</li>
+                    <li>Website migrations (GKE, cloud platforms)</li>
+                    <li>Domain, DNS & Cloudflare configuration</li>
+                    <li>SSL certificates via Let's Encrypt</li>
+                    <li>Server monitoring & recovery</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>DevOps & CI/CD Automation</h3>
+                <ul>
+                    <li>GitHub Actions pipeline setup</li>
+                    <li>Automated test-to-staging-to-production deployments</li>
+                    <li>Kubernetes (YAML, ingress, HPA)</li>
+                    <li>Nginx configuration</li>
+                    <li>Redis/Predis caching setup</li>
                 </ul>
             </div>
             <div class="service-card">
@@ -540,7 +681,7 @@
                 <ul>
                     <li>Data entry & management</li>
                     <li>Spreadsheet organization</li>
-                    <li>Email management</li>
+                    <li>Email newsletter management (Sendy)</li>
                     <li>File organization</li>
                     <li>Task tracking & reporting</li>
                 </ul>
@@ -556,17 +697,6 @@
                     <li>Research & documentation</li>
                 </ul>
             </div>
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>Communication & Tools</h3>
-                <ul>
-                    <li>Google Workspace</li>
-                    <li>Slack & email management</li>
-                    <li>Trello project management</li>
-                    <li>Regular progress updates</li>
-                    <li>Clear communication</li>
-                </ul>
-            </div>
         </div>
     </section>
 
@@ -574,13 +704,15 @@
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>WordPress & CMS</h3>
+                <h3>Web Development & CMS</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">WordPress Management</span>
-                    <span class="skill-tag">Content Updates</span>
-                    <span class="skill-tag">Plugin Management</span>
-                    <span class="skill-tag">Theme Customization</span>
-                    <span class="skill-tag">Website Backups</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">FileMaker</span>
                 </div>
             </div>
             <div class="skill-category">
@@ -588,23 +720,57 @@
                 <div class="skill-tags">
                     <span class="skill-tag">DigitalOcean</span>
                     <span class="skill-tag">Cloudways</span>
-                    <span class="skill-tag">Google Cloud</span>
+                    <span class="skill-tag">Google Cloud (GKE)</span>
                     <span class="skill-tag">Cloudflare</span>
-                    <span class="skill-tag">cPanel</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">DigitalOcean Spaces</span>
                 </div>
             </div>
             <div class="skill-category">
-                <h3>Technical Skills</h3>
+                <h3>DevOps & Infrastructure</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Website Testing</span>
-                    <span class="skill-tag">Bug Reporting</span>
-                    <span class="skill-tag">Basic HTML/CSS</span>
-                    <span class="skill-tag">MySQL Basics</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Nginx</span>
+                    <span class="skill-tag">Redis / Predis</span>
+                    <span class="skill-tag">Let's Encrypt</span>
+                    <span class="skill-tag">CI/CD Pipelines</span>
+                    <span class="skill-tag">HPA</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>UI/UX & Design Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Penpot</span>
+                    <span class="skill-tag">Adobe Photoshop</span>
+                    <span class="skill-tag">Wireframing</span>
+                    <span class="skill-tag">Prototyping</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>QA & SEO</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Manual Testing</span>
+                    <span class="skill-tag">Bug Fixing</span>
+                    <span class="skill-tag">Test Case Documentation</span>
+                    <span class="skill-tag">Chrome DevTools</span>
                     <span class="skill-tag">Basic SEO</span>
                 </div>
             </div>
             <div class="skill-category">
-                <h3>Productivity Tools</h3>
+                <h3>Tools & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">SourceTree</span>
+                    <span class="skill-tag">XAMPP</span>
+                    <span class="skill-tag">MAMP</span>
+                    <span class="skill-tag">Sendy</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Productivity & Collaboration</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Google Workspace</span>
                     <span class="skill-tag">Microsoft Excel</span>
@@ -614,21 +780,14 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3>AI Tools</h3>
+                <h3>AI Tools & Soft Skills</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Claude AI</span>
                     <span class="skill-tag">ChatGPT</span>
-                    <span class="skill-tag">AI-Assisted Tasks</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <div class="skill-tags">
                     <span class="skill-tag">Detail-Oriented</span>
                     <span class="skill-tag">Time Management</span>
                     <span class="skill-tag">Communication</span>
                     <span class="skill-tag">Problem-Solving</span>
-                    <span class="skill-tag">Self-Motivated</span>
                 </div>
             </div>
         </div>
@@ -638,30 +797,105 @@
         <h2 class="section-title">Professional Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Webmaster / Technical Website Manager</h3>
-                <div class="company">Conchology Inc. – Lapu-Lapu City</div>
+                <h3>Webmaster</h3>
+                <div class="company">Conchology Inc. – CLIP, Basak, Lapu-Lapu City</div>
                 <div class="date">November 2023 – Present</div>
                 <ul>
-                    <li>Manage daily operations of 10+ WordPress websites with thousands of data entries</li>
-                    <li>Deploy and migrate websites from GKE to DigitalOcean and Cloudways</li>
-                    <li>Handle plugin updates, theme adjustments, and content management</li>
-                    <li>Perform website testing and bug reporting</li>
-                    <li>Maintain website security and performance</li>
-                    <li>Provide technical support for website issues</li>
+                    <li>Led end-to-end migration of 6 production websites from GKE to DigitalOcean over 3 months with a 2-person team, maintaining zero-downtime deployments throughout</li>
+                    <li>Designed and implemented GitHub Actions CI/CD pipelines across DigitalOcean and Cloudways environments, automating deployments from test branch to staging and production on merge</li>
+                    <li>Strategically offloaded admin sites to Cloudways to reduce DigitalOcean resource load, while maintaining a unified deployment workflow across all environments</li>
+                    <li>Configured Cloudflare CDN, DNS, custom firewall rules, and SSL certificates via Let's Encrypt across all 6 domains; authored Nginx configs and Kubernetes YAML files for deployment, ingress, and service management</li>
+                    <li>Implemented Redis/Predis caching, pod-level monitoring, and Horizontal Pod Autoscaling (HPA) to optimize performance and handle traffic spikes dynamically</li>
+                    <li>Migrated MySQL 8.0 databases and all image assets to DigitalOcean Spaces; managed critical table backups alongside DigitalOcean automated backup and recovery tools</li>
+                    <li>Maintained 10 WordPress sites including plugin/database updates, daily manual QA testing, and bug fixing across all environments</li>
+                    <li>Developed PHP scripts to automate bi-weekly updates of hundreds of thousands of product listing records across 4 websites</li>
+                    <li>Coordinated email newsletters via Sendy to notify subscribers of new product availability</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <h3>Junior Webmaster / Website Assistant</h3>
-                <div class="company">Conchology Inc. – Lapu-Lapu City</div>
+                <h3>Junior Webmaster (Internship)</h3>
+                <div class="company">Conchology Inc. – CLIP, Basak, Lapu-Lapu City</div>
                 <div class="date">February 2023 – November 2023</div>
                 <ul>
-                    <li>Assisted in WordPress website maintenance and updates</li>
-                    <li>Performed data entry and content management tasks</li>
-                    <li>Documented website issues and test results</li>
-                    <li>Supported technical administrative tasks</li>
-                    <li>Helped with basic IT support (hardware, software installation)</li>
+                    <li>Assisted in the maintenance and troubleshooting of WordPress websites</li>
+                    <li>Helped fix front-end and back-end bugs to improve site performance</li>
+                    <li>Documented QA test results and supported admin-related technical tasks</li>
+                    <li>Assisted with IT tasks such as SSD upgrades, OS installations, and printer resets</li>
                 </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Capstone Project Manager & Developer</h3>
+                <div class="company">Passerelles Numériques – University of San Carlos</div>
+                <div class="date">2022 – 2023</div>
+                <ul>
+                    <li>Led a software development capstone project from planning through to final defense</li>
+                    <li>Contributed to front-end (HTML, CSS) and back-end development</li>
+                    <li>Designed UI mockups, prototypes, and project presentations</li>
+                    <li>Delegated tasks, tracked progress, and ensured timely completion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION (NEW) -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="edu-icon">🎓</div>
+                <h3>Certificate Program</h3>
+                <div class="school">University of San Carlos – Talamban Campus</div>
+                <div class="degree">Certificate in Computer Technology – Major in Software Development</div>
+                <span class="edu-note">Passerelles Numériques Scholar | Internship: Conchology Inc.</span>
+            </div>
+            <div class="education-card">
+                <div class="edu-icon">📚</div>
+                <h3>Bachelor's Degree (1 Year Completed)</h3>
+                <div class="school">Cebu Technological University – Main Campus</div>
+                <div class="degree">Bachelor of Secondary Education – General Science</div>
+            </div>
+            <div class="education-card">
+                <div class="edu-icon">🖥️</div>
+                <h3>Senior High School</h3>
+                <div class="school">Manlapay National High School</div>
+                <div class="degree">Tech-Voc Education – Major in Computer Hardware Servicing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION (NEW) -->
+    <section id="certifications">
+        <h2 class="section-title">Certifications & Trainings</h2>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-icon">🏅</div>
+                <div class="cert-info">
+                    <h4>Front-End Developer Specialization</h4>
+                    <p>Passerelles Numériques</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🎨</div>
+                <div class="cert-info">
+                    <h4>Adobe Photoshop Training (8 Sessions)</h4>
+                    <p>Datawords Philippines</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📱</div>
+                <div class="cert-info">
+                    <h4>Mobile App Development Workshop</h4>
+                    <p>Passerelles Numériques</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🏛️</div>
+                <div class="cert-info">
+                    <h4>DICT Online Trainings</h4>
+                    <p>Department of Information and Communications Technology</p>
+                </div>
             </div>
         </div>
     </section>
@@ -669,7 +903,7 @@
     <section id="contact">
         <h2 class="section-title">Let's Work Together</h2>
         <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-            Ready to hire a reliable Technical VA? I'm available for full-time or part-time work!
+            Ready to hire a reliable Web Developer & Technical VA? I'm available for full-time or part-time work!
         </p>
         <div class="contact-links">
             <a href="mailto:soseitbedoria03@gmail.com" class="contact-link">
@@ -685,7 +919,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Soseit Bedoria. Available for hire as Technical Virtual Assistant.</p>
+        <p>&copy; 2025 Soseit Bedoria. Web Developer & Webmaster | Available for hire.</p>
     </footer>
 
     <script>
